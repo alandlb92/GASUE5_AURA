@@ -31,6 +31,11 @@ void AEnemyCharacter::UnHighlightAction()
 	_weapon->SetRenderCustomDepth(false);
 }
 
+int32 AEnemyCharacter::GetCharacterLevel()
+{
+	return _level;
+}
+
 void AEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();

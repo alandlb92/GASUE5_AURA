@@ -21,6 +21,13 @@ APlayerCharacter::APlayerCharacter()
 	bUseControllerRotationYaw = false;
 }
 
+int32 APlayerCharacter::GetCharacterLevel()
+{
+	AAuraPlayerState* auraPlayerState = GetPlayerState<AAuraPlayerState>();
+	check(auraPlayerState);
+	return auraPlayerState->GetPlayerLevel();
+}
+
 void APlayerCharacter::PossessedBy(AController* newController)
 {
 	Super::PossessedBy(newController);
